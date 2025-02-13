@@ -24,13 +24,14 @@ for hour_data in weather_data["list"]:
     condition_code = hour_data["weather"][0]["id"]
     if int(condition_code) < 700:
         will_rain = True
-#1#
+
 if will_rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
         body="It's going to rain today. Remember to bring an ☔️",
         from_='+12512764417',
-        to='+61452271161'
+        to='+614522711xx'
     )
+    #put your number#
 
     print(message.status)
